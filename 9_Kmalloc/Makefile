@@ -1,8 +1,8 @@
-obj-m += hello_cdev.o
+obj-m += kmalloc.o
 
-all: hello_cdev.ko t
+all: kmalloc.ko t
 
-hello_cdev.ko: 
+kmalloc.ko: 
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
 t: test.c
